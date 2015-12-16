@@ -81,11 +81,6 @@ public class AboutActivity extends SettingsLayoutActivity {
     private static final String SETTINGS_DEVICE_NAME_INTENT_ACTION = "android.settings.DEVICE_NAME";
 
     /**
-     * Intent action of system update activity.
-     */
-    private static final String SETTINGS_UPDATE_SYSTEM = "android.settings.SYSTEM_UPDATE_SETTINGS";
-
-    /**
      * Intent to launch ads activity.
      */
     private static final String SETTINGS_ADS_ACTIVITY_PACKAGE = "com.google.android.gms";
@@ -191,9 +186,6 @@ public class AboutActivity extends SettingsLayoutActivity {
                 .title(R.string.about_preference)
                 .build();
 
-        header.add(new Layout.Action.Builder(res, systemIntent(SETTINGS_UPDATE_SYSTEM))
-                .title(R.string.about_system_update)
-                .build());
         header.add(mDeviceNameLayoutGetter);
         header.add(new Layout.Action.Builder(res, KEY_REBOOT)
                 .title(R.string.restart_button_label)
